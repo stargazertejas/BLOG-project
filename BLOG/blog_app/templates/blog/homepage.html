@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="col-sm-8 offset-2 mt-4 " >
+    <!-- <h3 class="text-light my-3">
+        Home Page
+    </h3> -->
+    {%for post in posts %}
+    <div class="jumbotron jumbotron-fluid  " style='background: linear-gradient(40deg, #40C9FF, #e81cff); color: black;  border-radius: 15px;''>
+      <div class="container  ">
+        <h3 class="display-5 text-left ">{{post.title}}</h3>
+        <medium class="text-left"<p class="lead col-sm-12 ">{{post.desc}}</p></medium>
+      </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}
